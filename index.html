@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teleprompter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="prompter" class="prompter">
+            <div id="text-display"></div>
+        </div>
+
+        <div class="controls">
+            <button id="playPause"><span id="playPauseIcon">▶</span></button>
+            <button id="reset">↺</button>
+            
+            <div class="font-controls">
+                <button id="decreaseFont">−</button>
+                <span id="fontSize">24</span>
+                <button id="increaseFont">+</button>
+            </div>
+
+            <div class="speed-control">
+                <span>Velocidade: </span>
+                <input type="range" id="speed" min="0.1" max="5" step="0.1" value="0.5">
+                <span id="speedValue">0.5x</span>
+            </div>
+        </div>
+
+        <textarea 
+            id="input-text" 
+            placeholder="Cole seu texto aqui (máximo 8000 caracteres)" 
+            maxlength="8000"
+        ></textarea>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
